@@ -1,6 +1,6 @@
 # Employee Management System
 
-The Employee Management System can be used for managing the employees at any organization.
+The Employee Management System can be used for managing the employees at any Organization.
 The frontend uses React whereas the backend uses Microservices based approach.
 
 The backend comprises of the following microservices:
@@ -14,11 +14,11 @@ The backend comprises of the following microservices:
 
 The System provides the following functionalities:
 <ul>
-    <li>Create/Read/Update/Delete new Employee in the database.</li>
-    <li>Register/Login/Change_password for the users.</li>
-    <li>Create/Approve/Reject/List the leaves applied by the employees.</li>
-    <li>Issue Paycheck/Send mail to the employees by the manager.</li>
-    <li>Search/Filter the employees in the organization based on the filters.</li>
+    <li>Create/Read/Update/Delete Employee in the database.</li>
+    <li>Register/Login/ChangePassword for the users.</li>
+    <li>Create/Approve/Reject/List the leaves applied by the Employees.</li>
+    <li>Issue Paycheck/Send mail to the employees by the Manager.</li>
+    <li>Search/Filter the employees in the Organization.</li>
     <li>Logout the user.
 </ul>
 
@@ -29,10 +29,10 @@ The System uses the following Tech Stacks:
     <li>Mongo DB</li>
 </ul>
 
-The Database consists of the following tables:
+The Database consists of the following Tables:
 <ul>
-    <li>All_Info_Regarding_Employee</li>
-    <li>Corporate_Info_Regarding_Employee</li>
+    <li>All_Info</li>
+    <li>Corporate_Info</li>
     <li>Salary_Info</li>
     <li>Login_Info</li>
     <li>Payroll_Info</li>
@@ -52,7 +52,7 @@ The System uses the following mechanism for storing the passwords:
   # Employee
 <ul>
     <li>The Employee can view his/her info and update the info.</li>
-    <li>The Employee can change their password</li>
+    <li>The Employee can change their password.</li>
     <li>The Employee can list his/her leaves.</li>
     <li>The Employee can apply leave.</li>
     <li>The Employee can perform logout.</li>
@@ -60,14 +60,29 @@ The System uses the following mechanism for storing the passwords:
 
   # Manager
 <ul>
-    <li>The Manager can view his personal info.</li>
-    <li>The Manager view the employees under him.</li>
+    <li>The Manager can view his/her personal info.</li>
+    <li>The Manager can view the employees under him/her.</li>
     <li>The Manager can create new employees.</li>
-    <li>The Manager can view leave the leave request of the employees under him.</li>
-    <li>The Manager can delete an employee under him.</li>
-    <li>The Manager can approve/reject the leave request of his employees.</li>
-    <li>The Manager can issue paycheck to his employee.</li>
+    <li>The Manager can view leave the leave request of the employees under him/her.</li>
+    <li>The Manager can delete an employee under him/her.</li>
+    <li>The Manager can approve/reject the leave request of him/her employees.</li>
+    <li>The Manager can issue paycheck to his/her employee.</li>
 </ul>
+
+  # All the Users
+  <ul>
+    <li>Search for employee in the system.</li>
+    <li>Filter the employee in the system.</li>
+    <li>The following filters are available:
+      <ol>
+        <li>Employee ID</li>
+        <li>Employee Name</li>
+        <li>Manager Name</li>
+        <li>Department</li>
+        <li>Location</li>
+      </ol>
+    </li>
+  <ul>
     
         
 
