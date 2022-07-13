@@ -82,10 +82,9 @@ The System uses the following mechanism for storing the passwords:
         <li>Location</li>
       </ol>
     </li>
-  <ul>
-   
-   
-   
+  </ul>  
+    
+    
 The Microservices based approach will be helpful for scaling the system as and when needed.
 Dockerized version of the System coming soon.😉️
 
