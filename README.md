@@ -1,7 +1,7 @@
 # Employee Management System
 
 The Employee Management System can be used for managing the employees at any organization.
-This is the frontend uses React whereas the backend uses Microservices based approach.
+The frontend uses React whereas the backend uses Microservices based approach.
 
 The backend comprises of the following microservices:
 <ul>
@@ -11,9 +11,6 @@ The backend comprises of the following microservices:
   <li> Leave Microservice</li>
   <li> Payroll Microservice</li>
 </ul>
-
-These microservices performs various functionalities and together comprises the backend of the application.
-
 
 The System provides the following functionalities:
 <ul>
@@ -49,7 +46,8 @@ The System uses the following mechanism for storing the passwords:
     <li>The passwords are stored after 10 rounds of Salting.</li>
     <li>The hash of the password is generated using Bcrypt.</li>
 </ul>
-# Functionalities available to the users:
+
+#Functionalities available to the users:
 
   ## Employee
 <ul>
