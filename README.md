@@ -64,9 +64,10 @@ The System uses the following mechanism for storing the passwords:
     <li>The Manager can view the employees under him/her.</li>
     <li>The Manager can create new employees.</li>
     <li>The Manager can view leave the leave request of the employees under him/her.</li>
-    <li>The Manager can delete an employee under him/her.</li>
-    <li>The Manager can approve/reject the leave request of him/her employees.</li>
+    <li>The Manager can delete employee under him/her.</li>
+    <li>The Manager can approve/reject the leave request of employees under him/her .</li>
     <li>The Manager can issue paycheck to his/her employee.</li>
+    <li>The Manager can perform logout.</li>
 </ul>
 
   # All the Users
