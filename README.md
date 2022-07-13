@@ -47,9 +47,9 @@ The System uses the following mechanism for storing the passwords:
     <li>The hash of the password is generated using Bcrypt.</li>
 </ul>
 
-#Functionalities available to the users:
+# Functionalities available to the users:
 
-  ## Employee
+  # Employee
 <ul>
     <li>The Employee can view his/her info and update the info.</li>
     <li>The Employee can change their password</li>
@@ -58,7 +58,7 @@ The System uses the following mechanism for storing the passwords:
     <li>The Employee can perform logout.</li>
 </ul>
 
-  ## Manager
+  # Manager
 <ul>
     <li>The Manager can view his personal info.</li>
     <li>The Manager view the employees under him.</li>
