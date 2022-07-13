@@ -85,6 +85,6 @@ The System uses the following mechanism for storing the passwords:
   </ul>  
     
     
-The Microservices based approach will be helpful for scaling the system as and when needed.
+The Microservices based approach will be helpful for scaling the system as and when needed. <br/>
 Dockerized version of the System coming soon.😉️
 
