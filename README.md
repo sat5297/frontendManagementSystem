@@ -5,11 +5,11 @@ The frontend uses React whereas the backend uses Microservices based approach.
 
 The backend comprises of the following microservices:
 <ul>
-  <li> Authentication Microservice</li>
-  <li> Employee Microservice</li>
-  <li> Manager Microservice</li>
-  <li> Leave Microservice</li>
-  <li> Payroll Microservice</li>
+  <li> <a href="https://github.com/sat5297/authMicroservice" target="_blank"> Authentication Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/employeeMicroservice" target="_blank"> Employee Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/managerMicroservice" target="_blank"> Manager Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/leaveMicroservice" target="_blank"> Leave Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/payrollMicroservice" target="_blank"> Payroll Microservice </a></li>
 </ul>
 
 The System provides the following functionalities:
