@@ -33,7 +33,6 @@ The Database consists of the following Tables:
 <ul>
     <li>All_Info</li>
     <li>Corporate_Info</li>
-    <li>Salary_Info</li>
     <li>Login_Info</li>
     <li>Payroll_Info</li>
     <li>Leave_Info</li>
