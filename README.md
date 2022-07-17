@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Employee Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Employee Management System can be used for managing the employees at any Organization.
+The frontend uses React whereas the backend uses Microservices based approach.
 
-## Available Scripts
+The backend comprises of the following microservices:
+<ul>
+  <li> <a href="https://github.com/sat5297/authMicroservice" target="_blank"> Authentication Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/employeeMicroservice" target="_blank"> Employee Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/managerMicroservice" target="_blank"> Manager Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/leaveMicroservice" target="_blank"> Leave Microservice </a></li>
+  <li> <a href="https://github.com/sat5297/payrollMicroservice" target="_blank"> Payroll Microservice </a></li>
+</ul>
 
-In the project directory, you can run:
+The System provides the following functionalities:
+<ul>
+    <li>Create/Read/Update/Delete Employee in the database.</li>
+    <li>Register/Login/ChangePassword for the users.</li>
+    <li>Create/Approve/Reject/List the leaves applied by the Employees.</li>
+    <li>Issue Paycheck/Send mail to the employees by the Manager.</li>
+    <li>Search/Filter the employees in the Organization.</li>
+    <li>Logout the user.
+</ul>
 
-### `npm start`
+The System uses the following Tech Stacks:
+<ul>
+    <li>React JS</li>
+    <li>Node JS</li>
+    <li>Mongo DB</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Database consists of the following Tables:
+<ul>
+    <li>All_Info</li>
+    <li>Corporate_Info</li>
+    <li>Login_Info</li>
+    <li>Payroll_Info</li>
+    <li>Leave_Info</li>
+</ul>
+   
+The System uses the following mechanism for storing the passwords:
+<ul>
+    <li>Generates default password for the user at registration.</li>
+    <li>The user can change the password.</li>
+    <li>The passwords are stored after 10 rounds of Salting.</li>
+    <li>The hash of the password is generated using Bcrypt.</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Functionalities available to the users:
 
-### `npm test`
+  # Employee
+<ul>
+    <li>The Employee can view his/her info and update the info.</li>
+    <li>The Employee can change their password.</li>
+    <li>The Employee can list his/her leaves.</li>
+    <li>The Employee can apply leave.</li>
+    <li>The Employee can perform logout.</li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  # Manager
+<ul>
+    <li>The Manager can view his/her personal info.</li>
+    <li>The Manager can view the employees under him/her.</li>
+    <li>The Manager can create new employees.</li>
+    <li>The Manager can view leave the leave request of the employees under him/her.</li>
+    <li>The Manager can delete employee under him/her.</li>
+    <li>The Manager can approve/reject the leave request of employees under him/her .</li>
+    <li>The Manager can issue paycheck to his/her employee.</li>
+    <li>The Manager can perform logout.</li>
+</ul>
 
-### `npm run build`
+  # All the Users
+  <ul>
+    <li>Search for employee in the system.</li>
+    <li>Filter the employee in the system.</li>
+    <li>The following filters are available:
+      <ol>
+        <li>Employee ID</li>
+        <li>Employee Name</li>
+        <li>Manager Name</li>
+        <li>Department</li>
+        <li>Location</li>
+      </ol>
+    </li>
+  </ul>  
+    
+    
+The Microservices based approach will be helpful for scaling the system as and when needed. <br/>
+Dockerized version of the System coming soon.😉️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
