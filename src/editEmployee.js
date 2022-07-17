@@ -9,12 +9,51 @@ function EditEmployee({props}){
         await axios.post(`http://localhost:9000/employees/update`, createObj)
         .then((res) => {
             console.log(res);
-            if(res.status == 200)
-                setMessage("Updated Data Successfully.")
-            else
-                setMessage("Failed to update data.")
+            if(res.status == 200){
+                setMessage("Updated Data Successfully in Employee Database.");
+                callPayrollUpdate(createObj);
+            }
+            else{
+                setMessage("Failed to update data.");
+            }
         });
-    }
+    };
+
+    // const callManagerUpdate = async (createObj) => {
+    //     await axios.post(`http://localhost:8000/manager/update`, createObj)
+    //     .then((res) => {
+    //         if(res.status == 200){
+    //             setMessage("Update Data Successfully in Corporate Database");
+    //             callPayrollUpdate(createObj);
+    //         }
+    //         else{
+    //             setMessage("Failed to update data.");
+    //         }
+    //     });
+    // };
+
+    const callPayrollUpdate = async (createObj) => {
+        await axios.post(`http://localhost:8100/payroll/update`, createObj)
+        .then((res) => {
+            if(res.status == 200){
+                setMessage("Update Data Successfully in Payroll Database");
+            }
+            else{
+                setMessage("Failed to update data.");
+            } 
+        });
+    };
+
+    // const callAuthUpdate = async (createObj) => {
+    //     await axios.post()
+    //     .then((res) => {
+    //         if(res.status == 200){
+    //             setMessage("Update Data Successfully in Payroll Database");
+    //         }else{
+    //             setMessage("Failed to update data.");
+    //         }
+    //     });
+    // };
 
     const submitForm = (event) => {
         event.preventDefault();

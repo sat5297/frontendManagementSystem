@@ -12,9 +12,41 @@ function ViewEmployeeInfo({props}){
         empmanagerid : props
     };
 
-    const callDeleteAPI = async (deleteObj) => {
-        await axios.delete(`http://localhost:8000/manager/delete`, deleteObj)
+    const deleteFromAll = async (deleteObj) => {
+        await axios.post(`http://localhost:9000/employees/delete`, deleteObj)
         .then((res) => {
+            console.log(res.data);
+        });
+    };
+
+    const deleteFromAuth = async (deleteObj) => {
+        await axios.post(`http://localhost:7500/login/delete`, deleteObj)
+        .then((res) => {
+            console.log(res.data);
+        });
+    };
+
+    const deleteFromPayroll = async (deleteObj) => {
+        await axios.post(`http://localhost:8100/payroll/delete`, deleteObj)
+        .then((res) => {
+            console.log(res.data);
+        });
+    };
+
+    const deleteFromLeaves = async (deleteObj) => {
+        await axios.post(`http://localhost:7000/leaves/delete`, deleteObj)
+        .then((res) => {
+            console.log(res.data);
+        });
+    };
+
+    const deleteFromManager = async (deleteObj) => {
+        await axios.post(`http://localhost:8000/manager/delete`, deleteObj)
+        .then((res) => {
+            deleteFromAll(deleteObj);
+            deleteFromAuth(deleteObj);
+            deleteFromPayroll(deleteObj);
+            deleteFromLeaves(deleteObj);
             callAPI(searchObj);
         });
     };
@@ -29,7 +61,7 @@ function ViewEmployeeInfo({props}){
     const DeleteAPI = (event) => {
         let index = event.target.value;
         console.log(emp[index].empID);
-        callDeleteAPI({empID : emp[index].empID});
+        deleteFromManager({empID : emp[index].empID});
     };
 
     const EditAPI = (event) => {

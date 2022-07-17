@@ -23,11 +23,27 @@ function CreateEmployee({props}){
     };
 
     const callRegister = async (createObj) => {
-        await axios.post(`http://localhost:7500/login/register`, createObj)
+        const obj = {
+            empID : createObj.empID,
+            empMail : createObj.empMail
+        };
+        await axios.post(`http://localhost:7500/login/register`, obj)
         .then((res) => {
             console.log(res);
             setMessage(res.data);
-        })
+        });
+    };
+
+    const callAddPayroll = async (createObj) => {
+        const obj= {
+            empID : createObj.empID,
+            mail : createObj.empMail
+        };
+        await axios.post(`http://localhost:8100/payroll/addEmp`, obj)
+        .then((res) => {
+            console.log(res);
+            setMessage(res.data);
+        });
     };
 
     const callAPI = async (createObj) => {
@@ -38,6 +54,7 @@ function CreateEmployee({props}){
             createObj.pass = createObj.empID;
             callAddEmp(createObj);
             callRegister(createObj);
+            callAddPayroll(createObj);
             setMessage(res.data);
         });
     };
@@ -52,13 +69,14 @@ function CreateEmployee({props}){
         let empName = ((document.getElementsByName("empName_create")||{})[0].value)||"";
         let empCell = ((document.getElementsByName("empCell_create")||{})[0].value)||"";
         let empLocation = ((document.getElementsByName("empLocation_create")||{})[0].value)||"";
+        let empMail = ((document.getElementsByName("empMail_create")||{})[0].value)||"";
         let empManager = ((document.getElementsByName("empManager_create")||{})[0].value)||"";
         let empManagerID = ((document.getElementsByName("empManagerID_create")||{})[0].value)||"";
         let empDept = ((document.getElementsByName("empDept_create")||{})[0].value)||"";
         let empDeptID = ((document.getElementsByName("empDeptID_create")||{})[0].value)||"";
         console.log(empManager, empManagerID,empDept, empDeptID);
         if(empID !== "" && empName !== "" && empCell !== "" && empLocation !== "" && empManager !== "" && empManagerID !== "" && empDept !== "" && empDeptID !== ""){
-            const createObj = {empID, empName, empCell, empLocation, empManager, empManagerID, empDept, empDeptID};
+            const createObj = {empID, empName, empCell, empLocation, empMail, empManager, empManagerID, empDept, empDeptID};
             callAPI(createObj);
         }
         else{
@@ -82,6 +100,9 @@ function CreateEmployee({props}){
                     </label>
                     <label> Employee Location : 
                         <input name="empLocation_create"/>
+                    </label>
+                    <label> Employee Mail : 
+                        <input name="empMail_create"/>
                     </label>
                     <label> Employee Manager :
                         <input name="empManager_create" />
