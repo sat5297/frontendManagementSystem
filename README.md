@@ -29,13 +29,13 @@ The System uses the following Tech Stacks:
     <li>Mongo DB</li>
 </ul>
 
-The Database consists of the following Tables:
+The following Databases are used with same table name:
 <ul>
-    <li>All_Info</li>
-    <li>Corporate_Info</li>
-    <li>Login_Info</li>
-    <li>Payroll_Info</li>
-    <li>Leave_Info</li>
+    <li>allinfoemp</li>
+    <li>corpinfoemp</li>
+    <li>authentication <p> Table : Login </p> </li>
+    <li>payroll</li>
+    <li>leaves</li>
 </ul>
    
 The System uses the following mechanism for storing the passwords:
