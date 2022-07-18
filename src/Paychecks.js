@@ -16,6 +16,7 @@ function Paychecks({props}){
     };
 
     const issuePaycheck = async (request) => {
+        console.log(request);
         await axios.post(`http://localhost:8100/payroll/issuePayCheck`, request)
         .then((res) => {
             console.log(emp, res);
@@ -32,7 +33,7 @@ function Paychecks({props}){
             empName : emp[ele[1]].empName,
             empManagerID : emp[ele[1]].empManagerID,
             empManager : emp[ele[1]].empManager,
-            status : status
+            empPayStatus : status
         };
         issuePaycheck(request);
     }
@@ -58,6 +59,7 @@ function Paychecks({props}){
             <tbody>
                 {
                     emp.map((ele,index) => {
+                        console.log(ele);
                         return (
                             <tr>
                                 <td>{ele.empID}</td>
@@ -65,9 +67,9 @@ function Paychecks({props}){
                                 <td>{ele.empManagerID}</td>
                                 <td>{ele.empManager}</td>
                                 {
-                                    ele.status === "Pending" && <td><button onClick={setButton} value={`0 ${index}`}>Issue Paycheck</button></td>
+                                    ele.empPayStatus === "Pending" && <td><button onClick={setButton} value={`0 ${index}`}>Issue Paycheck</button></td>
                                 }
-                                {   ele.status !== "Pending" && <td>{ele.status}</td>}
+                                {   ele.empPayStatus !== "Pending" && <td>{ele.empPayStatus}</td>}
                             </tr>
                         )
                     })

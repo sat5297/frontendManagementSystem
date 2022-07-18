@@ -60,8 +60,12 @@ function ViewEmployeeInfo({props}){
 
     const DeleteAPI = (event) => {
         let index = event.target.value;
-        console.log(emp[index].empID);
-        deleteFromManager({empID : emp[index].empID});
+        console.log(emp[index].empID, emp[index], "delete");
+        deleteFromManager({
+            empID : emp[index].empID, 
+            empManagerID : emp[index].empManagerID,
+            empManager : emp[index].empManager
+        });
     };
 
     const EditAPI = (event) => {

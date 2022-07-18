@@ -35,10 +35,16 @@ function CreateEmployee({props}){
     };
 
     const callAddPayroll = async (createObj) => {
+        console.log(createObj);
         const obj= {
             empID : createObj.empID,
-            mail : createObj.empMail
+            empName : createObj.empName,
+            empMail : createObj.empMail,
+            empManager : createObj.empManager,
+            empManagerID : createObj.empManagerID,
+            empPayStatus : "Pending"
         };
+        console.log(obj);
         await axios.post(`http://localhost:8100/payroll/addEmp`, obj)
         .then((res) => {
             console.log(res);
