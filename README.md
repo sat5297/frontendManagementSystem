@@ -29,13 +29,13 @@ The System uses the following Tech Stacks:
     <li>Mongo DB</li>
 </ul>
 
-The Database consists of the following Tables:
+The following Databases are used with same table name:
 <ul>
-    <li>All_Info</li>
-    <li>Corporate_Info</li>
-    <li>Login_Info</li>
-    <li>Payroll_Info</li>
-    <li>Leave_Info</li>
+    <li>allinfoemp</li>
+    <li>corpinfoemp</li>
+    <li>authentication <p> Table : Login </p> </li>
+    <li>payroll</li>
+    <li>leaves</li>
 </ul>
    
 The System uses the following mechanism for storing the passwords:
@@ -83,6 +83,20 @@ The System uses the following mechanism for storing the passwords:
       </ol>
     </li>
   </ul>  
+  
+  # Project Setup
+  <ul>
+    <li>mkdir empMgmt </li>
+    <li>cd empMgmt </li>
+    <li>mkdir backend frontend</li>
+    <li>cd backend --> make dir for all microservices and clone here.</li>
+    <li>cd frontend ---> make dir for frontend and clone here.</li>
+    <li> start all the microservices in different terminals. <b> npm run devStart</b></li>
+    <li> start the frontend <b> nodemon run start </b> </li>
+    <li> We have the admin user with managerID 1 as the root user. (We just need it to create first user)</li>
+    <li> Create the user in authentication database using postman. </li>
+    <li> Now you have the project Up and Running and available to use.</li>
+  </ul>
     
     
 The Microservices based approach will be helpful for scaling the system as and when needed. <br/>
