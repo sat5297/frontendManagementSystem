@@ -27,17 +27,17 @@ function AllEmployee(){
     const onFormSubmit = (event) => {
         setEmployee([])
         event.preventDefault();
-        let empid = ((document.getElementsByName("empid_all")||{})[0].value)||"";
-        let empname = ((document.getElementsByName("empname_all")||{})[0].value)||"";
-        let empmanager = ((document.getElementsByName("empmanager_all")||{})[0].value)||"";
-        let empdept = ((document.getElementsByName("empdept_all")||{})[0].value)||"";
-        let emplocation = ((document.getElementsByName("emploc_all")||{})[0].value)||"";
+        let empID = ((document.getElementsByName("empid_all")||{})[0].value)||"";
+        let empName = ((document.getElementsByName("empname_all")||{})[0].value)||"";
+        let empManager = ((document.getElementsByName("empmanager_all")||{})[0].value)||"";
+        let empDept = ((document.getElementsByName("empdept_all")||{})[0].value)||"";
+        let empLocation = ((document.getElementsByName("emploc_all")||{})[0].value)||"";
         let searchObj = {
-            empid,
-            empname,
-            empmanager,
-            empdept,
-            emplocation
+            empID,
+            empName,
+            empManager,
+            empDept,
+            empLocation
         };
         callAPI(searchObj);
     }

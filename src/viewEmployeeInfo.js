@@ -9,7 +9,7 @@ function ViewEmployeeInfo({props}){
     const [emp, setEmployee] = useState([]);
 
     const searchObj = {
-        empmanagerid : props
+        empManagerID : props
     };
 
     const deleteFromAll = async (deleteObj) => {
