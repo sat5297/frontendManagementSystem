@@ -58,8 +58,8 @@ The System uses the following mechanism for storing the passwords:
 </ul>
 
  # Employee Use Case Diagram
-  <img src="https://github.com/sat5297/frontendManagementSystem/blob/master/Blank%20diagram%20(2).jpeg" alt="Employee Use Case Diagram">
-  # Manager
+  <img src="https://github.com/sat5297/frontendManagementSystem/blob/master/EmployeeUseCase.jpeg" alt="Employee Use Case Diagram">
+ # Manager
 <ul>
     <li>The Manager can view his/her personal info.</li>
     <li>The Manager can view the employees under him/her.</li>
@@ -70,8 +70,11 @@ The System uses the following mechanism for storing the passwords:
     <li>The Manager can issue paycheck to his/her employee.</li>
     <li>The Manager can perform logout.</li>
 </ul>
+# Manager Use Case Diagram
+  <img src="https://github.com/sat5297/frontendManagementSystem/blob/master/ManagerUseCase.jpeg" alt="Employee Use Case Diagram">
 
-  # All the Users
+
+# All the Users
   <ul>
     <li>Search for employee in the system.</li>
     <li>Filter the employee in the system.</li>
