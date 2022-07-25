@@ -58,7 +58,6 @@ The System uses the following mechanism for storing the passwords:
 </ul>
 
  # Employee Use Case Diagram
- ![Alt text](https://github.com/sat5297/frontendManagementSystem/blob/master/Blank%20diagram%20(2).jpeg)
   <img src="https://github.com/sat5297/frontendManagementSystem/blob/master/Blank%20diagram%20(2).jpeg" alt="Employee Use Case Diagram">
   # Manager
 <ul>
